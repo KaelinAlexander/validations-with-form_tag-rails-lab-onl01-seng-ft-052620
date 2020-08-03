@@ -18,16 +18,15 @@ class AuthorsController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
     @author.update(author_param)
     if @author.valid?
       redirect_to author_path(@author)
     else
       render :edit
     end
-  end
-
-  def update
-
   end
 
   private
